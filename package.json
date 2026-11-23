@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "express": "^5.3.0",
+    "sequelize": "^6.37.8",
     "supertest": "^7.3.2",
+    "tedious": "^20.4.2",
     "vitest": "^5.1.1",
     "zod": "^4.6.7"
   }
