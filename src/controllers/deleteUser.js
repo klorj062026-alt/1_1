@@ -6,7 +6,9 @@ export const deleteUser = async (req, res) => {
 
   // params er en slags mappestruktur(den siste /user/navnher)
 
-  await sequelize.query(`DELETE FROM t_Users WHERE id = ${id}`);
+  await sequelize.query(`DELETE FROM t_Users WHERE id = :id`, {
+    replacements: { id },
+  });
 
   res.status(200).json({ message: "User was deleted" });
 };
