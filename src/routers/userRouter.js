@@ -15,13 +15,13 @@ const router = express.Router();
 router.post("/", validate(createUserSchema), createUser);
 
 // localhost/users/noesomkanendres(f.eks username)
-router.delete("/:username", deleteUser);
+router.delete("/:id", deleteUser);
 
 router.get("/", getAllUsers);
 
-router.put("/:username", validate(updateUserSchema), updateUser);
+router.put("/:id", validate(updateUserSchema), updateUser);
 
 export default router;
 
 // Utfordring - putt getUser i controllers.
-router.get("/:username", getUser);
+router.get("/:id", getUser);

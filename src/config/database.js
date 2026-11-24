@@ -3,6 +3,9 @@
 // Tedious -- TOLK
 
 import { Sequelize } from "sequelize";
+import "dotenv/config";
+
+// console.log("Passordet er 1234:", process.env.DB_PASSWORD === "1234");
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,

@@ -17,6 +17,7 @@ const app = express();
 
 try {
   await sequelize.authenticate();
+
   console.log("Database connected");
 } catch (err) {
   console.error("Kunne ikke koble til databasen:", err.message);
